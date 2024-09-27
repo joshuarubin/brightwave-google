@@ -18,6 +18,7 @@ repos:
       - id: detect-private-key
       - id: end-of-file-fixer
         exclude: ^go\.mod$
+      - id: no-commit-to-branch
       - id: trailing-whitespace
   - repo: https://github.com/Bahjat/pre-commit-golang
     rev: v1.0.3

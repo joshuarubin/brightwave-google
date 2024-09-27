@@ -1,0 +1,41 @@
+---
+linters-settings:
+  errcheck:
+    exclude-functions:
+      - (net/http.ResponseWriter).Write
+
+issues:
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - goerr113
+
+linters:
+  enable-all: true
+  disable:
+    - containedctx
+    - cyclop
+    - depguard
+    - execinquery
+    - exhaustive
+    - exhaustruct
+    - exportloopref
+    - forbidigo
+    - funlen
+    - gci
+    - gochecknoglobals
+    - gochecknoinits
+    - gocognit
+    - godot
+    - godox
+    - gomnd
+    - ireturn
+    - lll
+    - nestif
+    - nlreturn
+    - nonamedreturns
+    - tagliatelle
+    - testpackage
+    - varnamelen
+    - wrapcheck
+    - wsl

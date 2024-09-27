@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package google.v1;
+
+service GoogleService {
+  rpc Index(IndexRequest) returns (IndexResponse) {}
+  rpc Search(SearchRequest) returns (SearchResponse) {}
+}
+
+message IndexRequest {
+  // a URL from which to initiate a web crawl
+  string origin = 1;
+  // the number of hops between origin and a newly-discovered link
+  uint32 k = 2;
+}
+
+message IndexResponse {}
+
+message SearchRequest {
+  // the query string
+  string query = 1;
+}
+
+message Triple {
+  // the URL of an indexed web page relevant to query
+  string relevant_url = 1;
+  // origin and depth define parameters passed to /index for which relevant_url was discovered
+  repeated string origin_urls = 2;
+  uint32 depth = 3;
+}
+
+message SearchResponse {
+  repeated Triple triples = 1;
+}

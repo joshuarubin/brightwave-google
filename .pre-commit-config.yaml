@@ -1,0 +1,38 @@
+---
+repos:
+  - repo: https://github.com/zricethezav/gitleaks
+    rev: v8.18.4
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+        exclude: ^go\.mod$
+      - id: trailing-whitespace
+  - repo: https://github.com/Bahjat/pre-commit-golang
+    rev: v1.0.3
+    hooks:
+      - id: gofumpt
+        exclude: \.pb\.go$
+  - repo: https://github.com/dnephin/pre-commit-golang
+    rev: v0.5.1
+    hooks:
+      - id: go-mod-tidy
+      - id: go-generate
+        exclude: /wire_gen\.go$
+      - id: go-build
+      - id: go-unit-tests
+  - repo: https://github.com/golangci/golangci-lint
+    rev: v1.59.1
+    hooks:
+      - id: golangci-lint-full

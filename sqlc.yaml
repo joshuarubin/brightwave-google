@@ -1,0 +1,13 @@
+---
+version: "2"
+sql:
+  - engine: "sqlite"
+    queries: "internal/db/queries.sql"
+    schema: "internal/db/schema.sql"
+    gen:
+      go:
+        emit_prepared_queries: true
+        package: "db"
+        out: "internal/db"
+        rename:
+          url: URL

@@ -1,0 +1,13 @@
+---
+version: v2
+modules:
+  - path: api
+deps:
+  - buf.build/googleapis/googleapis
+lint:
+  use:
+    - DEFAULT
+    - PACKAGE_NO_IMPORT_CYCLE
+breaking:
+  use:
+    - WIRE

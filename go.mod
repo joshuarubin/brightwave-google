@@ -7,7 +7,7 @@ require (
 	github.com/aaaton/golem/v4/dicts/en v1.0.1
 	github.com/hashicorp/go-cleanhttp v0.5.2
 	github.com/jdkato/prose/v2 v2.0.0
-	github.com/mattn/go-sqlite3 v1.14.23
+	github.com/mattn/go-sqlite3 v1.14.24
 	github.com/spf13/cobra v1.8.1
 	golang.org/x/net v0.29.0
 	golang.org/x/text v0.18.0
